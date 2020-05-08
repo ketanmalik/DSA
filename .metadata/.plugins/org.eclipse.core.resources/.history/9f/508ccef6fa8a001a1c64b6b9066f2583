@@ -1,0 +1,40 @@
+
+public class SLL {
+
+	List<Node> nodes;
+	class Node {
+		int data;
+		Node next;
+	}
+
+	SLL() {
+nodes = new ArrayList<>();
+	}
+
+	Node addNode(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.next = null;
+		return n;
+	}
+
+	void printNodes() {
+		
+	}
+	
+	public static void main(String[] args) {
+		SLL obj = new SLL();
+		Node n1 = obj.addNode(1);
+		Node n2 = obj.addNode(2);
+		Node n3 = obj.addNode(3);
+		Node n4 = obj.addNode(4);
+		Node n5 = obj.addNode(5);
+
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+
+	}
+
+}

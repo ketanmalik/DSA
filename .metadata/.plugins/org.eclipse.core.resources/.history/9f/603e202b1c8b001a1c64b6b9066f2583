@@ -1,0 +1,19 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		List<SLL> nodes = new ArrayList<>();
+
+		SLL<Integer> obj = new SLL<>();
+		
+		obj.add(2);
+		obj.add(3);
+		obj.add(5);
+		obj.add(5);
+		
+		nodes.add(obj.add(1));
+
+	}
+}

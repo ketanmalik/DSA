@@ -1,0 +1,23 @@
+
+public class SLL {
+
+	class Node {
+		int data;
+		Node next;
+	}
+
+	SLL() {
+
+	}
+
+	void addNode(int data) {
+		Node n = new Node();
+		n.data = data;
+
+	}
+
+	public static void main(String[] args) {
+		SLL obj = new SLL();
+	}
+
+}

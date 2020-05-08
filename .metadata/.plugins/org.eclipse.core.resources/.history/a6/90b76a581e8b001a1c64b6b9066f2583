@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SLL<T> {
+
+	Node<T> head;
+	Node<T> tail;
+	List<Node<T>> nodes;
+
+	SLL() {
+		head = tail = null;
+		nodes = new ArrayList<>();
+	}
+
+	private class Node<T> {
+		T data;
+		Node<T> next;
+
+		Node(T data, Node next) {
+			this.data = data;
+			this.next = next;
+		}
+	}
+
+	// Adding new node to the list of nodes, O(1)
+	public void addToList(Node<T> node) {
+		nodes.add(node);
+	}
+
+	// Check if Linked List is empty, O(1)
+	public boolean isEmpty() {
+		return nodes.size() == 0;
+	}
+
+	// Add an Element, O(1)
+	public void add(T elem) {
+		addLast(elem);
+	}
+
+	// Add a node at the end of the linked list, O(1)
+	public void addLast(T elem) {
+		Node<T> node = new Node<T>(elem, null);
+		if (isEmpty()) {
+			head = tail = node;
+		}
+		tail.next = node;
+		tail = node;
+		addToList(node);
+	}
+
+	public void addFirst(T elem) {
+		Node<T> node = new Node(elem, null);
+		if (isEmpty()) {
+			head = tail = node;
+		}
+	}
+
+}

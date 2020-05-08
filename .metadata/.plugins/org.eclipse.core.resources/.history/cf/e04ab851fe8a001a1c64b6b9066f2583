@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SLL<T> {
+	List<T> nodes;
+	Node head;
+	Node tail;
+	int size;
+
+	SLL() {
+		nodes = new ArrayList<T>();
+		this.head = this.tail = null;
+		this.size = 0;
+	}
+
+	private static class Node<T> {
+		T data;
+		Node next;
+
+		Node(T data, Node next) {
+			this.data = data;
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			return this.data.toString();
+		}
+	}
+
+	public void clear() {
+
+	}
+}

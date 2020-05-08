@@ -1,0 +1,13 @@
+
+public class Driver {
+
+	public static void main(String[] args) {
+		SLL obj = new SLL();
+		obj.add(1);
+		obj.add(2);
+		obj.add(3);
+		obj.add(5);
+		obj.add(5s);
+		
+	}
+}

@@ -1,0 +1,68 @@
+import java.util.*;
+
+public class BinaryHeap<T extends Comparable<T>> {
+
+	// A dynamic list to track the elements inside the heap
+	private List<T> heap = null;
+
+	// Total elements in the PQ
+	int heapSize;
+
+	// This map keeps track of all indexes of a particular node
+	private Map<T, TreeSet<Integer>> map;
+
+	BinaryHeap() {
+		heap = new ArrayList<>();
+		heapSize = 0;
+		map = new HashMap<>();
+	}
+
+	// Check if heap is empty
+	public boolean isEmpty() {
+		return heapSize == 0;
+	}
+
+	// Clear the PQ and the map
+	public void clear() {
+		heap.clear();
+		map.clear();
+	}
+
+	// Returns the size of the PQ
+	public int size() {
+		return heapSize;
+	}
+
+	// Returns the value of the lowest priority element in queue
+	public T peek() {
+		if (isEmpty())
+			return null;
+		return heap.get(0);
+	}
+
+	// Test if an element is there in the PQ, O(1)
+	public boolean contains(T elem) {
+		if (elem == null)
+			return false;
+		return map.containsKey(elem);
+
+//		Linear Search, takes O(n) time but it can be done in O(1) with a Hashtable
+//		for(int i=0;i<heapSize;i++) {
+//			if(heap.get(i) == elem) {
+//				return true;
+//			}
+//			return false;
+//		}
+	}
+
+	// Removes the root of the PQ, O(log(n))
+	public T poll() {
+		return removeAt(0);
+	}
+
+	// Removes a node at a particular index
+	public T removeAt(int index) {
+
+	}
+
+}

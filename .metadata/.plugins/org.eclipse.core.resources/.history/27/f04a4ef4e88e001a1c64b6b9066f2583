@@ -1,0 +1,8 @@
+import java.util.*;
+
+public class BinaryHeap<T extends Comparable<T>> {
+
+	// A dynamic list to track the elements inside the heap
+	private List<T> heap = null;
+
+}

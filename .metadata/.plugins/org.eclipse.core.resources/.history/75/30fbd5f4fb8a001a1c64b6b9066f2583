@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SLL {
+
+	List<Node> nodes;
+	Node ptr;
+
+	class Node {
+		int data;
+		Node next;
+	}
+
+	SLL() {
+		nodes = new ArrayList<>();
+		ptr = null;
+	}
+
+	Node addNode(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.next = null;
+		return n;
+	}
+
+	void printNodes() {
+		for (int i = 0; i < nodes.size(); i++) {
+			ptr = nodes.get(i);
+			System.out.print("Node " + i);
+			System.out.print("\t" + "Data: " + ptr.data + "\t" + "Points to: " + ptr.next);
+			System.out.println();
+		}
+
+	}
+
+	public static void main(String[] args) {
+		SLL obj = new SLL();
+
+		// Create new nodes
+		Node n1 = obj.addNode(1);
+		Node n2 = obj.addNode(2);
+		Node n3 = obj.addNode(3);
+		Node n4 = obj.addNode(4);
+		Node n5 = obj.addNode(5);
+
+		// Set next pointer of nodes
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
+		n4.next = n5;
+
+		// Add nodes to the List
+		obj.nodes.add(n1);
+		obj.nodes.add(n2);
+		obj.nodes.add(n3);
+		obj.nodes.add(n4);
+		obj.nodes.add(n5);
+
+		obj.printNodes();
+
+	}
+
+}

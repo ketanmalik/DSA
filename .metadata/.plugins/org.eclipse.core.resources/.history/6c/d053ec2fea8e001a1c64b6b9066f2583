@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class BinaryHeap<T extends Comparable<T>> {
+
+	// A dynamic list to track the elements inside the heap
+	private List<T> heap = null;
+
+	// Total elements in the PQ
+	int heapSize;
+
+	// This map keeps track of all indexes of a particular node
+	private Map<T, TreeSet<Integer>> map;
+
+	BinaryHeap() {
+		heap = new ArrayList<>();
+		heapSize = 0;
+		map = new HashMap<>();
+	}
+
+	// Check if heap is empty
+	public boolean isEmpty() {
+		return heapSize == 0;
+	}
+
+	public void clear() {
+		heap.clear();
+	}
+
+}

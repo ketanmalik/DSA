@@ -1,0 +1,39 @@
+public class SLL<T> {
+	Node head;
+	Node tail;
+	int size;
+
+	SLL() {
+		this.head = this.tail = null;
+		this.size = 0;
+	}
+
+	// Internal Node class to represent Nodes
+	private static class Node<T> {
+		T data;
+		Node next;
+
+		Node(T data, Node next) {
+			this.data = data;
+			this.next = next;
+		}
+
+		@Override
+		public String toString() {
+			return this.data.toString();
+		}
+	}
+
+	// Empty Linked List, O(n)
+	public void clear() {
+		Node<T> trav = head;
+		while (trav != null) {
+			Node<T> next = trav.next;
+			trav.next = null;
+			trav.data = null;
+			trav = next;
+		}
+		head = tail = null;
+		size = 0;
+	}
+}

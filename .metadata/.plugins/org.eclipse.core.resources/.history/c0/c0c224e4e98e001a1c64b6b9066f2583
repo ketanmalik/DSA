@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class BinaryHeap<T extends Comparable<T>> {
+
+	// A dynamic list to track the elements inside the heap
+	private List<T> heap = null;
+	int heapSize;
+
+	BinaryHeap() {
+		heap = new ArrayList<>();
+		heapSize = 0;
+	}
+
+	// Check if heap is empty
+	public boolean isEmpty() {
+		return heapSize == 0;
+	}
+
+}

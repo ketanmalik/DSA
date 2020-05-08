@@ -1,0 +1,9 @@
+
+public class Stack<T> {
+
+	private static class Node<T> {
+		T data;
+		Node<T> next;
+
+	}
+}

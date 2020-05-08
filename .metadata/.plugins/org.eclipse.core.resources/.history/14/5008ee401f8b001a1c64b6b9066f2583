@@ -1,0 +1,13 @@
+public class SLL<T> {
+	
+	// Private inner class for Node
+	private class Node<T> {
+		private T data;
+		private Node<T> next;
+
+		Node(T data, Node<T> next) {
+			this.data = data;
+			this.next = next;
+		}
+	}
+}
