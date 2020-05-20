@@ -62,7 +62,7 @@ public class MaxSubArray {
 			}
 		}
 		sum = 0;
-		int rightSum = arr[mid+1], rightIndex = mid+1;
+		int rightSum = arr[mid + 1], rightIndex = mid + 1;
 		for (int i = mid + 1; i <= high; i++) {
 			sum += arr[i];
 			if (sum >= rightSum) {
@@ -71,6 +71,31 @@ public class MaxSubArray {
 			}
 		}
 		return new ArrayList<>(Arrays.asList(leftIndex, rightIndex, leftSum + rightSum));
+	}
+
+	// Brute-Force approach, O(n^2)
+	public static List<Integer> bruteForceSubArray(int[] arr) {
+
+		int sum = arr[0], leftIndex = 0, rightIndex = 0, temp = 0;
+
+		for (int i = 0; i < arr.length; i++) {
+			temp = arr[i];
+			if (temp > sum) {
+				sum = temp;
+				leftIndex = i;
+				rightIndex = i;
+			}
+			for (int j = i + 1; j < arr.length; j++) {
+				temp += arr[j];
+				if (temp > sum) {
+					sum = temp;
+					leftIndex = i;
+					rightIndex = j;
+				}
+			}
+		}
+
+		return new ArrayList<>(Arrays.asList(leftIndex, rightIndex, sum));
 	}
 
 }
