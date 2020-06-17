@@ -2988,3 +2988,16 @@ Java Model Exception: Java Model Status [<project root> [in QuickSort] is not on
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1006 2020-06-11 20:10:42.405
 !MESSAGE <project root> [in QuickSort] is not on its project's build path
+!SESSION 2020-06-16 17:59:50.137 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=1.8.0_221
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/ketanmalik/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/ketanmalik/Downloads/Everything's gonna be just fine!!!/DSA -product org.eclipse.epp.package.java.product -keyring /Users/ketanmalik/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-16 17:59:52.976
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-16 17:59:53.001
+!MESSAGE Using Apache MINA sshd as ssh client.
