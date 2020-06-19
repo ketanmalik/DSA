@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /*
@@ -243,5 +241,5 @@ public class BST<T extends Comparable<T>> {
 //		System.out.println(queue.peek().left);
 		levelorderRec(queue.peek(), queue);
 	}
-	
+
 }
